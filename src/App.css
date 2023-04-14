@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+body{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    width: 600px;
+    height: 600px;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+    font-size: 2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.aa{
+    color: black;
 }
 
-.App-link {
-  color: #61dafb;
+header,form{
+     min-height: 20vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 10px;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input,form button{
+    border: none;
+    background-color: black;
+    padding: 0.5rem;
+    font-size: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+form input{
+    border-radius: 10px 0px 0px 10px;
+}
+
+form button{
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+form button{
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    cursor: pointer;
+    background-color: rgb(28, 85, 217);
+}
+
+form button:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(51, 111, 252);
+}
+
+form input{
+    background-color: rgb(198, 198, 198);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style-type: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background-color: rgb(223, 223, 223);
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+
+.fall{
+    transform: translate(10rem) rotateZ(20deg'angle');
+    opacity:0 ;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+
+
+.complet-btn{
+    background-color: rgb(6, 212, 20);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.complet-btn:hover{
+    background-color: rgb(129, 250, 137);
+    color: rgb(255, 255, 255);
+}
+.complet-btn:active{
+    background-color: rgb(48, 184, 57);
+    color: rgb(0, 0, 0);
+}
+
+.trash-btn{
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+.trash-btn:hover{
+    background-color: rgb(197, 51, 51);
+    color: rgb(249, 249, 249);
+}
+.trash-btn:active{
+    background-color: rgb(255, 0, 0);
+    color: rgb(249, 249, 249);
+}
+
+
